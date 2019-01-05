@@ -1,0 +1,206 @@
+body, html{
+   background: black;
+   color: white;
+   font-family: Helvetica Neue, Helvetica, sans-serif; 
+   height: 100%;
+}
+
+a {
+   outline: none;
+}
+
+.social-media{text-align: center;}
+
+.social-media img{
+   border: none;
+   width: 30px;
+   height: 30px;
+}
+
+.logo{
+    display: block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    text-align: center;
+}
+
+.nav{text-transform: uppercase;}
+
+.nav a{
+   color: white;
+   text-decoration: none;
+   padding: 0 3%;
+   transition: 0.3s;
+   -webkit-transition: 0.3s;
+   -moz-transition: 0.3s;
+}
+
+.nav a:hover{background-color: #404040;}
+
+.nav .icon{display: none;}
+
+.container.scrolling{
+   display: flex;
+   flex-direction: column;
+}
+
+.container.scrolling.shows ul{
+    list-style-type: none;
+}
+
+.container.scrolling.shows ul li {
+    border-bottom: 1px solid #333;
+}
+
+.container.scrolling.shows ul li em{
+    color: #BBB;
+}
+
+.container.scrolling.shows ul li b{
+    font-size: 20px;
+    
+}
+
+.footer{
+   background-image: black;
+   padding: 20px;
+   clear: both;
+}
+
+.image-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: cover;
+}
+
+.image-gallery img {
+    flex-grow: 1;
+    height: 200px;
+    padding-left: 5px;
+}
+
+.jake, .kieran, .tyler, .liam { 
+    float: left;
+    margin: 2% 2% 2% 2%;
+    padding: 0 2% 0 0;
+    text-decoration: none;
+}
+
+.kieran, .liam {
+    background: #60271c;
+    box-shadow: inset 0px 0px 56px -3px #2E130E;
+    -webkit-box-shadow: inset 0px 0px 56px -3px #2E130E;
+    -moz-box-shadow: inset 0px 0px 56px -3px #2E130E;
+    -o-box-shadow: inset 0px 0px 56px -3px #2E130E;
+}
+
+.jake, .tyler {
+    background: #193e66;
+    box-shadow: inset 0px 0px 56px -16px #0E2033;
+    -webkit-box-shadow: inset 0px 0px 56px -16px #0E2033;
+    -moz-box-shadow: inset 0px 0px 56px -16px #0E2033;
+    -o-box-shadow: inset 0px 0px 56px -16px #0E2033;
+}
+
+.jake img, .kieran img, .tyler img, .liam img{
+    width: 150px;
+    height: 100%;
+    float: left;
+    padding: 0 2% 2% 2%;
+}
+
+.jake p, .kieran p, .tyler p, .liam img{
+    display: block;
+    text-align: center;
+    font-size: 22px;
+}
+
+.item {
+    float: left;
+    margin: 2% 2% 2% 2%;
+    padding: 0 2% 0 0;
+    text-decoration: none;
+    text-align: center;
+}
+
+.item img {
+    width: 250px;
+    height: 100%;
+}
+
+.item p {
+    font-size: 22px;
+}
+
+.poster {
+    border: 1px solid grey;
+}
+
+.merchgrid {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    width: 33%;
+    text-align: center;
+    padding: 8px;
+}
+
+
+@media screen and (min-width: 795px){/*Big screens*/
+
+    .logo {height: 140px;}
+
+    .nav{
+        display: block;
+        text-align: center;
+   }
+   
+    .container img{display: none;}
+
+    .fixed{
+        min-height: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .fixed.bg-1{background-image: url("images/wallpaper.PNG");}
+
+    .fixed.bg-2{background-image: url("images/yellowimg.png");}
+
+    .fixed.bg-3{background-image: url("images/graphic.JPG");}
+}
+
+@media screen and (max-width: 795px){/*Little screens*/
+   
+    .logo {height: 80px;}
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container img{max-width: 100%;}
+
+    .nav {
+        background-color: black;
+        position: absolute;
+        z-index: 1; 
+        width: 100%;
+    }
+
+    .nav a{display: none;}
+
+    .nav a.icon{
+        display: block;
+        text-align: center;
+    }
+   
+    .nav.open-nav a{
+        display: block;
+        text-align: center;
+    }
+}
